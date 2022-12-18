@@ -41,15 +41,40 @@ typedef struct instruction_s
 } instruction_t;
 
 void (*get_opcode_func(char *))(stack_t **, unsigned int);
+
+/*stack functions*/
 stack_t *push(stack_t **, int);
 void printall(stack_t *);
 void printall_rev(stack_t *);
 void pop(stack_t **);
 void swap(stack_t **);
 void add(stack_t **);
+void sub(stack_t **);
+void divide(stack_t **);
+void mul(stack_t **);
+void mod(stack_t **);
+void pchar(stack_t **);
+void pstr(stack_t **);
+void rotl(stack_t **);
+void rotr(stack_t **);
 void free_stack(stack_t **);
+
 int validate_num(char *);
+/*opcode functions*/
 void push_op(stack_t **, unsigned int);
 void pall_op(stack_t **, unsigned int);
+void pint_op(stack_t **, unsigned int);
+void pop_op(stack_t **, unsigned int);
+void swap_op(stack_t **, unsigned int);
+void add_op(stack_t **, unsigned int);
+void nop_op(stack_t **, unsigned int);
+void sub_op(stack_t **, unsigned int);
+void div_op(stack_t **, unsigned int);
+void mul_op(stack_t **, unsigned int);
+void mod_op(stack_t **, unsigned int);
+void pchar_op(stack_t **, unsigned int);
+void pstr_op(stack_t **, unsigned int);
+void rotl_op(stack_t **, unsigned int);
+void rotr_op(stack_t **, unsigned int);
 
 #endif

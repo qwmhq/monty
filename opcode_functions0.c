@@ -49,3 +49,35 @@ void pall_op(stack_t **stack, unsigned int line_number __attribute__((unused)))
 {
 	printall(*stack);
 }
+
+/**
+ * pint_op - pint opcode function
+ *
+ * @stack: the stack
+ * @line_number: the current line number
+ */
+void pint_op(stack_t **stack, unsigned int line_number)
+{
+	if (*stack == NULL)
+	{
+		fprintf(stderr, "L%u: can't pint, stack empty\n", line_number);
+		exit(EXIT_FAILURE);
+	}
+	printf("%d\n", (*stack)->n);
+}
+
+/**
+ * pop_op - pop opcode function
+ *
+ * @stack: the stack
+ * @line_number: the current line number
+ */
+void pop_op(stack_t **stack, unsigned int line_number)
+{
+	if (*stack == NULL)
+	{
+		fprintf(stderr, "L%u: can't pop an empty stack\n", line_number);
+		exit(EXIT_FAILURE);
+	}
+	pop(stack);
+}
