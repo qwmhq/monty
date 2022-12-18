@@ -32,7 +32,7 @@ int main(int argc, char **argv)
 	while ((nread = getline(&line, &len, fp)) != -1)
 	{
 		opcode = strtok(line, DELIM);
-		if (*line == '#' || opcode == NULL)
+		if (opcode == NULL || *opcode == '#')
 			continue;
 		opcode_func = get_opcode_func(opcode);
 		if (opcode_func == NULL)
