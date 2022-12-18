@@ -62,3 +62,14 @@ void pstr_op(stack_t **stack, unsigned int line_number __attribute__((unused)))
 {
 	pstr(*stack);
 }
+
+/**
+ * rotl_op - rotl opcode function
+ *
+ * @stack: the stack
+ * @line_number: the current line number
+ */
+void rotl_op(stack_t **stack, unsigned int line_number __attribute__((unused)))
+{
+	rotl(stack);
+}
