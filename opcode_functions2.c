@@ -51,3 +51,14 @@ void pchar_op(stack_t **stack, unsigned int line_number)
 	}
 	printf("%c\n", (*stack)->n);
 }
+
+/**
+ * pstr_op - pstr opcode function
+ *
+ * @stack: the stack
+ * @line_number: the current line number
+ */
+void pstr_op(stack_t **stack, unsigned int line_number __attribute__((unused)))
+{
+	pstr(*stack);
+}

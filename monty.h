@@ -54,7 +54,7 @@ void divide(stack_t **);
 void mul(stack_t **);
 void mod(stack_t **);
 void pchar(stack_t **);
-void pstr(stack_t **);
+void pstr(stack_t *);
 void rotl(stack_t **);
 void rotr(stack_t **);
 void free_stack(stack_t **);
