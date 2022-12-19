@@ -70,3 +70,35 @@ void rotr(stack_t **stack)
 	tail->prev->next = NULL;
 	tail->prev = NULL;
 }
+
+/**
+ * pushq - add an element to the end of a queue
+ *
+ * @stack: address of the stack
+ * @n: the element to add
+ *
+ * Return: the address of the stack after adding the new element
+ */
+stack_t *pushq(stack_t **stack, int n)
+{
+	stack_t *new, *ptr = *stack;
+
+	new = malloc(sizeof(stack_t));
+	if (new == NULL)
+	{
+		fprintf(stderr, "Error: malloc failed\n");
+		exit(EXIT_FAILURE);
+	}
+	new->n = n;
+	new->next = NULL;
+	while (ptr && ptr->next)
+		ptr = ptr->next;
+	if (ptr)
+	{
+		ptr->next = new;
+		new->prev = ptr;
+	}
+	else
+		*stack = new;
+	return (*stack);
+}

@@ -36,7 +36,10 @@ void push_op(stack_t **stack, unsigned int line_number)
 		fprintf(stderr, "L%u: usage: push integer\n", line_number);
 		exit(EXIT_FAILURE);
 	}
-	push(stack, atoi(arg));
+	if (stack_mode)
+		push(stack, atoi(arg));
+	else
+		pushq(stack, atoi(arg));
 }
 
 /**

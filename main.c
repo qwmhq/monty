@@ -1,5 +1,7 @@
 #include "monty.h"
 
+int stack_mode = 1;
+
 /**
  * main - monty main
  *
