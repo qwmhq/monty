@@ -17,7 +17,8 @@ void rotr_op(stack_t **stack, unsigned int line_number __attribute__((unused)))
  * @stack: the stack
  * @line_number: the current line number
  */
-void stack_op(stack_t **stack __attribute__((unused)), unsigned int line_number __attribute__((unused)))
+void stack_op(stack_t **stack __attribute__((unused)),
+				unsigned int line_number __attribute__((unused)))
 {
 	stack_mode = 1;
 }
@@ -28,7 +29,8 @@ void stack_op(stack_t **stack __attribute__((unused)), unsigned int line_number 
  * @stack: the stack
  * @line_number: the current line number
  */
-void queue_op(stack_t **stack __attribute__((unused)), unsigned int line_number __attribute__((unused)))
+void queue_op(stack_t **stack __attribute__((unused)),
+				unsigned int line_number __attribute__((unused)))
 {
 	stack_mode = 0;
 }
