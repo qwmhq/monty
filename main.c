@@ -35,7 +35,10 @@ int main(int argc, char **argv)
 	{
 		opcode = strtok(line, DELIM);
 		if (opcode == NULL || *opcode == '#')
+		{
+			line_number++;
 			continue;
+		}
 		opcode_func = get_opcode_func(opcode);
 		if (opcode_func == NULL)
 		{
